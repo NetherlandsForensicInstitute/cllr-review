@@ -8,7 +8,7 @@ import scipy.stats as st
 from matplotlib.cbook import boxplot_stats
 
 # PLOT SAVE DIRECTORY
-PLOT_SAVE_DIRECTORY = "C:/Users/stijn/OneDrive/Studie/Master Forensic Science/Literature Thesis/Publication"
+PLOT_SAVE_DIRECTORY = "C:/Figures"
 
 # Sent font globally
 plt.rcParams.update({'font.family':'Times new Roman'})
