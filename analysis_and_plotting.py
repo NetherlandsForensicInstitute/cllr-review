@@ -18,7 +18,7 @@ plt.rcParams.update({'mathtext.default':  'regular' })
 years = [int(x) for x in np.linspace(2006, 2022, 17)]
 
 # Read Literature data into dataframe
-df = pd.read_excel('Literature Overview.xlsx')
+df = pd.read_excel('Data.xlsx')
 
 # Create df with only automated systems
 df_automated_systems = df[df['System Type'] == '(Semi)-Automated System']
@@ -179,10 +179,10 @@ cllr_count_order = label_counts.index
 ax = sns.stripplot(df_relevant_cllrs.dropna(subset=['Cllr']), y='Forensic Area Publication', x='Cllr', order=cllr_count_order, color='black', s=8, zorder=3, jitter=0.25)
 sns.despine(left=True, bottom=True)
 # plt.title('$C_{llrs}$ per Forensic Area / Analysis', fontsize=35, pad=20)
-plt.xticks(fontsize=25, rotation=0)
+plt.xticks(fontsize=30, rotation=0)
 ax.set_yticklabels(labels=[f"{y} ({str(x)}) " for x,y in zip(label_counts, label_counts.index)])
 plt.yticks(fontsize=30)
-plt.xlim(0, 1.5)
+plt.xlim(0, 1.8)
 plt.ylabel('Forensic Area / Analysis', fontsize=30)
 plt.xlabel('$C_{llr}$', fontsize=30)
 ax.grid(axis='x', zorder=0)
